@@ -1,15 +1,3 @@
----
-title: "Ansible Role: serdigital64.development.dev_ruby"
-description: "Manage provisioning of Ruby"
-authors:
-  - SerDigital64
-tags:
-  - ansible
-  - devops
-  - linux
-  - automation
----
-
 # Ansible Role: serdigital64.development.dev_ruby
 
 ## Purpose

@@ -1,15 +1,3 @@
----
-title: "Ansible Role: serdigital64.development.dev_tools"
-description: "Manage provisioning of common development tools"
-authors:
-  - SerDigital64
-tags:
-  - ansible
-  - devops
-  - linux
-  - automation
----
-
 # Ansible Role: serdigital64.development.dev_tools
 
 ## Purpose
