@@ -1,11 +1,19 @@
 ---
 dev_python_base:
   files: "{{ dev_python_base_common['files'] }}"
-  access: "{{ dev_python_base_common['access'] }}"
+  access:
+    user:
+      owner: "root"
+    group:
+      owner: "root"
+    mode:
+      dir: "0755"
+      file: "0644"
   run:
     python_3_10: &dev_python_base_run_python_3_10
       "/usr/bin/python3.9"
     python_latest: *dev_python_base_run_python_3_10
+    python_defaul: *dev_python_base_run_python_3_10
 
 dev_python_profiles:
   distro:
@@ -18,6 +26,7 @@ dev_python_profiles:
         - name: "which"             # Required by pip
         # venv already included in the main python package
     latest: *dev_python_profiles_distro_v3_10
+    default: *dev_python_profiles_distro_v3_10
 
 dev_python_repository_custom_yum: []
 dev_python_repository_custom_apt: []
