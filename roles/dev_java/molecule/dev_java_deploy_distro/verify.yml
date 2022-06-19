@@ -17,9 +17,16 @@
         public: true
         name: "dev_java"
 
-    - name: "Verify required packages are deployed (package: {{ item }})"
+    - name: "Verify required packages are deployed"
       ansible.builtin.assert:
         that:
-          - dev_java_profiles[item['key']]['distro']['latest']['packages'][0]['name'] in ansible_facts['packages']
-      loop: "{{ dev_java_application | dict2items  }}"
+          - item['name'] in ansible_facts['packages']
+      loop: "{{
+        dev_java_profiles[
+          dev_java_application['type']
+        ][
+          dev_java_application['version']
+        ]['packages']
+      }}"
+...
 ...

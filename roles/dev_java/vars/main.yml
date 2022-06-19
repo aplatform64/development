@@ -10,6 +10,7 @@ dev_java_platforms:
   - "Ubuntu22"
   - "Fedora33"
   - "Fedora35"
+  - "Fedora36"
   - "Debian10"
   - "Debian11"
 
@@ -32,6 +33,4 @@ dev_java_os_family: "
     {{ 'NotSupported' }}
   {%- endif -%}
   "
-
-dev_java___deploy_profile: ~
 ...
