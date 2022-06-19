@@ -11,11 +11,11 @@ dev_java_profiles:
     v1_11:
       packages:
         - name: "java-11-openjdk"
-    v1_17: &dev_java_profiles_distro_v17
+    v1_18: &dev_java_profiles_distro_v18
       source: "updates"
       packages:
         - name: "java-latest-openjdk"
-    latest: *dev_java_profiles_distro_v17
+    latest: *dev_java_profiles_distro_v18
 
 dev_java_repository_custom_yum: []
 dev_java_repository_custom_apt: []

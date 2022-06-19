@@ -4,26 +4,18 @@ dev_java_base:
     java: "/usr/bin/java"
 
 dev_java_profiles:
-  openjdk_jdk_v1_8:
-    distro:
-      latest:
-        packages:
-          - name: "openjdk-8-jdk"
-  openjdk_jdk_v1_11:
-    distro:
-      latest:
-        packages:
-          - name: "openjdk-11-jdk"
-  openjdk_jdk_v1_17:
-    distro:
-      latest:
-        packages:
-          - name: "openjdk-17-jdk"
-  openjdk_jdk_v1_18:
-    distro:
-      latest:
-        packages:
-          - name: "openjdk-18-jdk"
+  distro:
+    v1_8:
+      packages:
+        - name: "openjdk-8-jdk"
+    v1_11:
+      packages:
+        - name: "openjdk-11-jdk"
+    v1_18: &dev_java_profiles_distro_v18
+      source: "updates"
+      packages:
+        - name: "openjdk-18-jdk"
+    latest: *dev_java_profiles_distro_v18
 
 dev_java_repository_custom_yum: []
 dev_java_repository_custom_apt: []
