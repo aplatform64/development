@@ -15,7 +15,7 @@ dev_java_platforms:
   - "Debian10"
   - "Debian11"
 
-dev_java_os_family: |
+dev_java_os_family: >-
   {%- if
       ( ansible_distribution == 'CentOS' ) or
       ( ansible_distribution == 'RedHat' ) or
